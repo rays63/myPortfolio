@@ -21,23 +21,23 @@ This project is a personal portfolio website built using the Django web framewor
 
 ## Setup
 
-1. Clone the repo:
+1. **Clone the repo:**
 ```
 git clone https://github.com/your-username/your-portfolio.git
 cd your-portfolio
 ```
 
-1. Install Dependencies:
+2. **Install Dependencies:**
 ```
 pip install -r requirements.txt
 ```
 
-1. Apply Migration:
+3. **Apply Migration:**
 ```
 python manage.py migrate
 ```
 
-1. Run the Dev Server:
+4. **Run the Dev Server:**
 ```
 python manage.py runserver
 ```
