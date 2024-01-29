@@ -5,14 +5,7 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Raymond Maharjan</h1>
       <p>I'm <span class="typed" data-typed-items="Data Enthusiast, Developer, a Student"></span></p>
-      <div class="social-links">
-        {% comment %} <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> {% endcomment %}
-        <a href="https://www.linkedin.com/in/raymz/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/rays63" class="Github"><i class="bx bxl-github"></i></a>
-      </div>
+      {% include 'partials/_socials.html' %}
     </div>
   </section><!-- End Hero -->
 
@@ -58,7 +51,8 @@
               </div>
             </div>
             <p>
-              Even though I am at the beginning of my programming journey, I have already started working on some small projects to apply what I've learned:
+              My primary goal is to build a strong foundation in Python and progressively delve into the intricacies of data science and machine learning.
+               I am excited about the prospect of applying Python to real-world problems and discovering innovative solutions.
             </p>
           </div>
         </div>
@@ -120,7 +114,7 @@
 
         <div class="section-title">
           <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Even though I am at the beginning of my programming journey, I have already started working on some small projects to apply what I've learned:</p>
         </div>
 
         <div class="row skills-content">
@@ -400,7 +394,7 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    {% comment %} <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -491,8 +485,8 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
-
+    </section><!-- End Services Section --> {% endcomment %}
+    {% comment %} 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
@@ -542,6 +536,7 @@
                 </p>
               </div>
             </div><!-- End testimonial item -->
+        
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -574,7 +569,8 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    {% endcomment %}<!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -591,19 +587,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Kirtipur, Kathmandu</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>raymondmhz63@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+977 </p>
               </div>
 
             </div>
