@@ -23,7 +23,7 @@ This project is a personal portfolio website built using the Django web framewor
 
 1. **Clone the repo:**
 ```
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/rays63/myPortfolio.git
 cd your-portfolio
 ```
 
