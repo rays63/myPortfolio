@@ -41,3 +41,5 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
+5. **Edit required html and css from templates**
