@@ -1105,8 +1105,12 @@ section {
   width: 100%;
   background: #fff;
 }
+.contact .contact-form {
+  width: 100%;
+  background: #fff;
+}
 
-.contact .php-email-form .form-group {
+.contact .form-group {
   padding-bottom: 8px;
 }
 
@@ -1151,23 +1155,23 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .input,
+.contact textarea {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email] {
+.contact input[type=text],
+.contact input[type=email] {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact button[type=submit] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
@@ -1176,7 +1180,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact button[type=submit]:hover {
   background: #0678e3;
 }
 
