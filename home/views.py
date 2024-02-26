@@ -6,13 +6,30 @@ from .forms import ContactForm
 from .models import ContactMessage
 
 # Create your views here.
-def home(requests):
+def home(request):
+    message_sent = False  # Initialize the flag
+    
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            ContactMessage.objects.create(
+                name=form.cleaned_data['name'],
+                email=form.cleaned_data['email'],
+                subject=form.cleaned_data['subject'],
+                message=form.cleaned_data['message']
+            )
+            message_sent = True  # Set the flag to True after message is sent
+            form = ContactForm()  # Reset the form after successful submission
+    else:
+        form = ContactForm()
+    
     files = CV.objects.all()
-    print(files)
     context = {
-        'files' : files
+        'files': files,
+        'form': form,
+        'message_sent': message_sent  # Pass the flag to the template context
     }
-    return render(requests, 'home/index.html',context)
+    return render(request, 'home/index.html', context)
 
 def download_cv(request, cv_id):
     cv = get_object_or_404(CV, pk=cv_id)
@@ -22,18 +39,4 @@ def download_cv(request, cv_id):
     response['Content-Disposition'] = f'attachment; filename="{cv.title}"'
     return response
 
-def contact(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            # Process form data here, like sending emails
-            ContactMessage.objects.create(
-                name=form.cleaned_data['name'],
-                email=form.cleaned_data['email'],
-                subject=form.cleaned_data['subject'],
-                message=form.cleaned_data['message']
-            )
-            return render(request, 'home/thankyou.html')
-    else:
-        form = ContactForm()
-    return render(request, 'home/contact.html', {'form': form})
+
