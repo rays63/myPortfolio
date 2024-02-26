@@ -7,3 +7,4 @@ urlpatterns = [
     path('download/<int:cv_id>/',
          views.download_cv, name='download_cv'),
 ]
+
