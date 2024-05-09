@@ -66,7 +66,22 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            // Restore scroll position from local storage
+            var scrollPosition = localStorage.getItem("scrollPosition");
+            if (scrollPosition) {
+              $(window).scrollTop(scrollPosition);
+              localStorage.removeItem("scrollPosition"); // Remove stored scroll position after restoring
+            }
 
+            $("#contact-form").submit(function (event) {
+              // Store scroll position in local storage before form submission
+              localStorage.setItem("scrollPosition", $(window).scrollTop());
+            });
+          });
+        </script>
 </body>
 
 </html>
