@@ -51,9 +51,20 @@
         <div
           class="alert alert-success alert-dismissible fade show"
           role="alert"
+          id="success-alert"
         >
           Message has been sent!
         </div>
+        <script>
+          // JavaScript to hide the alert after 5 seconds (5000 milliseconds)
+          setTimeout(function() {
+            var alert = document.getElementById('success-alert');
+            if (alert) {
+              alert.classList.remove('show');
+              alert.classList.add('hide'); // Optionally add a class for hiding
+            }
+          }, 5000);
+        </script>
         {% endif %}
         
       </div>
