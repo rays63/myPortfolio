@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from .models import CV
 from .forms import ContactForm
 from .models import ContactMessage
+from .github_api import get_github_repos
 
 # Create your views here.
 def home(request):
@@ -29,7 +30,21 @@ def home(request):
         'form': form,
         'message_sent': message_sent  # Pass the flag to the template context
     }
+
+    github_username = 'rays63'
+    github_token = None  # Optional: Add token to avoid rate limits
+    repos = get_github_repos(github_username, github_token)
+    print("DEBUG - fetched repos:", len(repos))  # Optional debug
+
+    context = {
+        'files': files,
+        'form': form,
+        'message_sent': message_sent,
+        'repos': repos,  # ⬅️ include in context
+    }
+
     return render(request, 'home/index.html', context)
+
 
 def download_cv(request, cv_id):
     cv = get_object_or_404(CV, pk=cv_id)
