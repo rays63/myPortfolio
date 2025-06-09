@@ -4,7 +4,7 @@
 <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Raymond Maharjan</h1>
-      <p>I'm a <span class="typed" data-typed-items="Software Quality Assurance Engineer"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Data Enthusiast, Developer, a Student"></span></p>
       {% include 'partials/_socials.html' %}
     </div>
   </section><!-- End Hero -->
@@ -13,12 +13,20 @@
 
     {%include 'home/partials/_about.html'%}
 
+    <!-- ======= Skills Section ======= -->
     {% include "home/partials/_skills.html" %}
+    <!-- End Skills Section -->
 
+    <!-- ======= Resume Section ======= -->
     {% include "home/partials/_resume.html" %}
-    
+    <!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
     {% include "home/partials/_portfolio.html" %}
-  
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Contact Section ======= -->
     {% include "home/partials/_contact.html"%}
+    <!-- End Contact Section -->
   </main>
 {% endblock %}
