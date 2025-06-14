@@ -3,3 +3,4 @@ home/migrations
 myPortfolio\__pycache__
 db.sqlite3
 .env
+staticfiles
